@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Code2, Smartphone, Database, Globe2, Bot, CheckCircle2, GraduationCap, Building2, Briefcase, Phone, Mail } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { HeroCarousel } from "@/components/site/HeroCarousel";
+import { Reveal } from "@/components/site/Reveal";
 import ctaBand from "@/assets/cta-band.jpg";
 import training from "@/assets/training.jpg";
 import caseRE from "@/assets/case-realestate.jpg";
@@ -53,24 +54,24 @@ function HomePage() {
       {/* STATS */}
       <section className="bg-cream border-b border-border">
         <div className="container-x py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((s) => (
-            <div key={s.l} className="text-center md:text-left md:border-l md:first:border-0 md:pl-6">
+          {stats.map((s, i) => (
+            <Reveal key={s.l} delay={(i % 4) as 0 | 1 | 2 | 3} className="text-center md:text-left md:border-l md:first:border-0 md:pl-6">
               <div className="font-display text-4xl md:text-5xl font-medium text-maroon">{s.v}</div>
               <div className="text-xs mt-1 uppercase tracking-wider text-muted-foreground">{s.l}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* ABOUT STRIP */}
       <section className="container-x py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
-        <div>
+        <Reveal>
           <div className="text-xs uppercase tracking-[0.25em] text-maroon font-medium">About MellowMoon</div>
           <h2 className="mt-3 font-display text-4xl md:text-5xl font-medium leading-tight">
             A software house where craft meets corporate discipline.
           </h2>
-        </div>
-        <div className="text-muted-foreground leading-relaxed space-y-4">
+        </Reveal>
+        <Reveal delay={1} className="text-muted-foreground leading-relaxed space-y-4">
           <p>
             MellowMoon SoftTech Pvt Ltd is a full-stack technology partner for businesses that
             want serious engineering without enterprise bloat. From agentic AI to CRMs, hybrid
@@ -83,7 +84,7 @@ function HomePage() {
           <Link to="/about" className="inline-flex items-center gap-2 text-maroon font-medium hover:text-maroon-light">
             More about us <ArrowRight className="h-4 w-4" />
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       {/* SERVICES */}
@@ -99,15 +100,17 @@ function HomePage() {
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-            {services.map((s) => (
-              <Link key={s.title} to={s.to} className="group bg-card p-8 hover:bg-maroon hover:text-cream transition-colors">
-                <s.icon className="h-8 w-8 text-maroon group-hover:text-gold transition-colors" />
-                <h3 className="mt-5 font-display text-2xl font-medium">{s.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground group-hover:text-cream/80 leading-relaxed">{s.desc}</p>
-                <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-maroon group-hover:text-gold">
-                  Learn more <ArrowRight className="h-3.5 w-3.5" />
-                </div>
-              </Link>
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={(i % 3) as 0 | 1 | 2}>
+                <Link to={s.to} className="group block bg-card p-8 hover:bg-maroon hover:text-cream transition-colors h-full">
+                  <s.icon className="h-8 w-8 text-maroon group-hover:text-gold transition-colors" />
+                  <h3 className="mt-5 font-display text-2xl font-medium">{s.title}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground group-hover:text-cream/80 leading-relaxed">{s.desc}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-maroon group-hover:text-gold">
+                    Learn more <ArrowRight className="h-3.5 w-3.5" />
+                  </div>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -160,17 +163,19 @@ function HomePage() {
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {cases.map((c) => (
-              <article key={c.title} className="group bg-card border border-border overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={c.img} alt={c.title} width={1200} height={800} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="p-6">
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-gold-dark font-semibold">{c.tag}</div>
-                  <h3 className="mt-2 font-display text-2xl font-medium">{c.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
-                </div>
-              </article>
+            {cases.map((c, i) => (
+              <Reveal key={c.title} delay={(i % 3) as 0 | 1 | 2}>
+                <article className="group bg-card border border-border overflow-hidden h-full">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={c.img} alt={c.title} width={1200} height={800} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <div className="p-6">
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-gold-dark font-semibold">{c.tag}</div>
+                    <h3 className="mt-2 font-display text-2xl font-medium">{c.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
