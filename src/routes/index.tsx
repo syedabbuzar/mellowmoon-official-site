@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Code2, Smartphone, Database, Globe2, Bot, CheckCircle2, GraduationCap, Building2, Briefcase, Phone, Mail } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import hero from "@/assets/hero.jpg";
+import { HeroCarousel } from "@/components/site/HeroCarousel";
 import ctaBand from "@/assets/cta-band.jpg";
 import training from "@/assets/training.jpg";
 import caseRE from "@/assets/case-realestate.jpg";
@@ -46,32 +46,9 @@ const cases = [
 
 function HomePage() {
   return (
-    <SiteLayout>
-      {/* HERO */}
-      <section className="relative bg-maroon-dark text-cream overflow-hidden">
-        <img src={hero} alt="" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-maroon-dark via-maroon-dark/85 to-transparent" />
-        <div className="container-x relative py-28 md:py-40 max-w-6xl">
-          <div className="text-xs uppercase tracking-[0.3em] text-gold mb-5">MellowMoon SoftTech Pvt Ltd</div>
-          <h1 className="font-display text-5xl md:text-7xl font-medium leading-[1.02] max-w-4xl">
-            Engineering software.<br />
-            <span className="text-gradient-gold">Empowering business.</span>
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg text-cream/85 leading-relaxed">
-            We build AI-powered software, web and mobile platforms, and business systems
-            that turn ambitious ideas into shipped products — and we train the engineers
-            who'll build the next generation.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-gold text-maroon-dark px-7 py-3.5 font-medium hover:bg-cream transition-colors">
-              Start a project <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 border border-cream/30 text-cream px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
-              Explore services
-            </Link>
-          </div>
-        </div>
-      </section>
+    <SiteLayout transparentHeader>
+      <HeroCarousel />
+
 
       {/* STATS */}
       <section className="bg-cream border-b border-border">
