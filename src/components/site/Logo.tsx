@@ -2,7 +2,7 @@ import logo from "@/assets/mellowmoon-logo.png.asset.json";
 
 export function Logo({
   className = "",
-  showText = true,
+  showText = false,
   variant = "dark",
 }: {
   className?: string;
@@ -14,14 +14,9 @@ export function Logo({
     <div className={`flex items-center gap-3 ${className}`}>
       <img
         src={logo.url}
-        alt="MellowMoon SoftTech logo"
-        width={48}
-        height={48}
-        className="h-11 w-11 object-contain"
-        style={{
-          mixBlendMode: "screen",
-          filter: isLight ? "brightness(1.1) contrast(1.05)" : "none",
-        }}
+        alt="MellowMoon SoftTech Pvt Ltd"
+        className="h-12 w-auto object-contain select-none"
+        draggable={false}
       />
       {showText && (
         <div className="leading-tight">

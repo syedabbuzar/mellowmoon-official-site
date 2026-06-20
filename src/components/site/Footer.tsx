@@ -7,9 +7,7 @@ export function Footer() {
     <footer className="bg-maroon-dark text-cream/90 mt-24">
       <div className="container-x py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <div className="bg-cream rounded-sm p-3 inline-block">
-            <Logo />
-          </div>
+          <Logo variant="light" />
           <p className="mt-5 text-sm leading-relaxed text-cream/70 max-w-sm">
             MellowMoon SoftTech Pvt Ltd builds AI-powered software, web & mobile applications,
             and business platforms that turn ambitious ideas into shipped products.
