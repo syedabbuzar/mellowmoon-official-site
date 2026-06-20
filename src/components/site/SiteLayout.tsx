@@ -2,10 +2,16 @@ import type { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export function SiteLayout({ children }: { children: ReactNode }) {
+export function SiteLayout({
+  children,
+  transparentHeader = false,
+}: {
+  children: ReactNode;
+  transparentHeader?: boolean;
+}) {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <Header transparent={transparentHeader} />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
@@ -22,10 +28,12 @@ export function PageHero({
   subtitle?: string;
 }) {
   return (
-    <section className="bg-maroon text-cream relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20 pointer-events-none"
-        style={{ backgroundImage: "radial-gradient(circle at 20% 30%, var(--gold) 0%, transparent 45%)" }} />
-      <div className="container-x py-20 md:py-28 relative">
+    <section className="bg-maroon text-cream relative overflow-hidden pt-32 md:pt-40">
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{ backgroundImage: "radial-gradient(circle at 20% 30%, var(--gold) 0%, transparent 45%)" }}
+      />
+      <div className="container-x py-20 md:py-24 relative">
         {eyebrow && (
           <div className="text-xs uppercase tracking-[0.25em] text-gold mb-4">{eyebrow}</div>
         )}
