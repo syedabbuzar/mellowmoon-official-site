@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Code2, Smartphone, Database, Globe2, Bot, CheckCircle2, GraduationCap, Building2, Briefcase, Phone, Mail } from "lucide-react";
+import { ArrowRight, Sparkles, Code2, Smartphone, Database, Globe2, Bot, CheckCircle2, GraduationCap, Building2, Briefcase, Phone, Mail, Palette, Cloud, Headphones, Users, Lightbulb, Globe, Target } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { HeroCarousel } from "@/components/site/HeroCarousel";
 import { Reveal } from "@/components/site/Reveal";
