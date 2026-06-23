@@ -79,6 +79,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "MellowMoon SoftTech" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "MellowMoon SoftTech Pvt Ltd — Engineering Software. Empowering Business." },
+      { name: "twitter:title", content: "MellowMoon SoftTech Pvt Ltd — Engineering Software. Empowering Business." },
+      { property: "og:description", content: "MellowMoon SoftTech builds AI-powered software, web & mobile apps, CRM, inventory and business platforms — and trains the next generation of engineers." },
+      { name: "twitter:description", content: "MellowMoon SoftTech builds AI-powered software, web & mobile apps, CRM, inventory and business platforms — and trains the next generation of engineers." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5ee7c415-037f-4f1e-9769-f39b5f1db1d7/id-preview-2bf65c40--a2713e1b-c718-4c5b-84c0-4d1070fc96cc.lovable.app-1782226210985.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5ee7c415-037f-4f1e-9769-f39b5f1db1d7/id-preview-2bf65c40--a2713e1b-c718-4c5b-84c0-4d1070fc96cc.lovable.app-1782226210985.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
