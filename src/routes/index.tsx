@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkles, Code2, Smartphone, Database, Globe2, Bot, CheckCircle2, GraduationCap, Building2, Briefcase, Phone, Mail } from "lucide-react";
+import { ArrowRight, Sparkles, Code2, Smartphone, Database, Globe2, Bot, CheckCircle2, GraduationCap, Building2, Briefcase, Phone, Mail, Palette, Cloud, Headphones, Users, Lightbulb, Globe, Target } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { HeroCarousel } from "@/components/site/HeroCarousel";
 import { Reveal } from "@/components/site/Reveal";
@@ -25,11 +25,26 @@ export const Route = createFileRoute("/")({
 
 const services = [
   { icon: Bot, title: "Agentic AI", desc: "Autonomous AI agents that reason, plan and act inside your workflows.", to: "/services/agentic-ai" },
-  { icon: Globe2, title: "Web Applications", desc: "Production-grade web platforms engineered for scale and performance.", to: "/services/web-apps" },
-  { icon: Smartphone, title: "Hybrid Mobile Apps", desc: "One codebase. iOS, Android and the web — all natively fast.", to: "/services/mobile-apps" },
-  { icon: Code2, title: "Custom Software", desc: "Bespoke business software shaped exactly around your operations.", to: "/services/custom-software" },
+  { icon: Globe2, title: "Web Development", desc: "Building responsive and high-performance websites tailored to your business needs.", to: "/services/web-apps" },
+  { icon: Smartphone, title: "Mobile App Development", desc: "Creating user-friendly and feature-rich mobile applications for Android and iOS platforms.", to: "/services/mobile-apps" },
+  { icon: Palette, title: "UI/UX Design", desc: "Designing intuitive and engaging user interfaces and experiences that delight users.", to: "/services/custom-software" },
+  { icon: Cloud, title: "Cloud Solutions", desc: "Providing scalable and secure cloud services to enhance your business operations.", to: "/services/custom-software" },
+  { icon: Code2, title: "Software Development", desc: "Offering comprehensive custom software development solutions to meet your business needs.", to: "/services/custom-software" },
   { icon: Database, title: "CRM & Inventory", desc: "Sales, inventory and operations portals that scale with your team.", to: "/services/crm-inventory" },
+  { icon: Headphones, title: "IT Consulting", desc: "Delivering expert IT consulting services to drive your business growth and efficiency.", to: "/services/custom-software" },
   { icon: Building2, title: "Business Websites", desc: "Real-estate, education, retail and service websites that convert.", to: "/services/business-sites" },
+];
+
+const offerings = [
+  { icon: Lightbulb, title: "Innovative Solutions", desc: "We deliver cutting-edge solutions to modernize your business processes. From AI-driven automation to scalable cloud platforms, we cater to diverse industry needs — digital transformation, cybersecurity, and advanced analytics — all designed to optimize efficiency and drive growth." },
+  { icon: Users, title: "Expert Team", desc: "Our team of engineers, designers and consultants is dedicated to delivering top-quality work. With years of hands-on industry experience, we tackle complex challenges and deliver sustainable, production-grade solutions across software, IT consulting and project management." },
+  { icon: Headphones, title: "Customer Satisfaction", desc: "We prioritise customer satisfaction with tailored solutions and proactive support. From onboarding and training to ongoing maintenance, our team anticipates your needs and ensures smooth operations — building long-term partnerships, not one-off deliveries." },
+];
+
+const whyUs = [
+  { icon: Briefcase, title: "Industry Expertise", desc: "Hands-on experience across Ed-Tech, E-commerce, Healthcare, Real Estate, Beauty & Wellness and more — we understand the unique challenges of each sector and tailor solutions accordingly." },
+  { icon: Globe, title: "International Reach", desc: "We build and maintain partnerships with distinguished collaborators across India and abroad, giving us access to modern technologies and the ability to deliver tailored solutions to customers worldwide." },
+  { icon: Target, title: "Mission & Vision", desc: "Our mission is simple — prioritise client success. We work closely with you to understand your unique needs and ship software that creates measurable business outcomes." },
 ];
 
 const stats = [
@@ -116,6 +131,30 @@ function HomePage() {
         </div>
       </section>
 
+      {/* OFFERINGS */}
+      <section className="container-x py-20 md:py-28">
+        <div className="max-w-2xl mb-14">
+          <div className="text-xs uppercase tracking-[0.25em] text-maroon font-medium">Offerings</div>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl font-medium leading-tight">
+            What sets our delivery apart.
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-px bg-border">
+          {offerings.map((o, i) => (
+            <Reveal key={o.title} delay={(i % 3) as 0 | 1 | 2}>
+              <div className="bg-card p-8 h-full">
+                <div className="h-12 w-12 rounded-full bg-maroon/10 flex items-center justify-center">
+                  <o.icon className="h-6 w-6 text-maroon" />
+                </div>
+                <h3 className="mt-5 font-display text-2xl font-medium">{o.title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{o.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+
       {/* TRAINING */}
       <section className="container-x py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative">
@@ -182,15 +221,27 @@ function HomePage() {
       </section>
 
       {/* WHY US */}
-      <section className="container-x py-20 md:py-28">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-maroon font-medium">Why MellowMoon</div>
+      <section className="bg-secondary/40 border-y border-border py-20 md:py-28">
+        <div className="container-x">
+          <div className="max-w-2xl mb-14">
+            <div className="text-xs uppercase tracking-[0.25em] text-maroon font-medium">Why Choose MellowMoon</div>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-medium leading-tight">
               Engineered for outcomes, not just deliverables.
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            {whyUs.map((w, i) => (
+              <Reveal key={w.title} delay={(i % 3) as 0 | 1 | 2}>
+                <div className="bg-card border border-border p-8 h-full hover:border-maroon transition-colors">
+                  <w.icon className="h-7 w-7 text-maroon" />
+                  <h3 className="mt-4 font-display text-2xl font-medium">{w.title}:</h3>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{w.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
             {[
               { i: Sparkles, t: "Custom by default", d: "Every build is shaped around your business, not a template." },
               { i: CheckCircle2, t: "100% satisfaction", d: "We iterate until you're genuinely happy with what we ship." },
@@ -206,6 +257,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* CTA BAND */}
       <section className="relative text-cream overflow-hidden">
@@ -224,11 +276,11 @@ function HomePage() {
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-gold text-maroon-dark px-7 py-3.5 font-medium hover:bg-cream transition-colors">
               Start a project <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href="tel:+910000000000" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
-              <Phone className="h-4 w-4" /> +91 00000 00000
+            <a href="tel:+917796442339" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
+              <Phone className="h-4 w-4" /> +91 77964 42339
             </a>
-            <a href="mailto:hello@mellowmoon.tech" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
-              <Mail className="h-4 w-4" /> hello@mellowmoon.tech
+            <a href="mailto:mellowmoonsofttech4u@gmail.com" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
+              <Mail className="h-4 w-4" /> mellowmoonsofttech4u@gmail.com
             </a>
           </div>
         </div>
