@@ -221,15 +221,27 @@ function HomePage() {
       </section>
 
       {/* WHY US */}
-      <section className="container-x py-20 md:py-28">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-maroon font-medium">Why MellowMoon</div>
+      <section className="bg-secondary/40 border-y border-border py-20 md:py-28">
+        <div className="container-x">
+          <div className="max-w-2xl mb-14">
+            <div className="text-xs uppercase tracking-[0.25em] text-maroon font-medium">Why Choose MellowMoon</div>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-medium leading-tight">
               Engineered for outcomes, not just deliverables.
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            {whyUs.map((w, i) => (
+              <Reveal key={w.title} delay={(i % 3) as 0 | 1 | 2}>
+                <div className="bg-card border border-border p-8 h-full hover:border-maroon transition-colors">
+                  <w.icon className="h-7 w-7 text-maroon" />
+                  <h3 className="mt-4 font-display text-2xl font-medium">{w.title}:</h3>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{w.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
             {[
               { i: Sparkles, t: "Custom by default", d: "Every build is shaped around your business, not a template." },
               { i: CheckCircle2, t: "100% satisfaction", d: "We iterate until you're genuinely happy with what we ship." },
@@ -245,6 +257,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* CTA BAND */}
       <section className="relative text-cream overflow-hidden">
