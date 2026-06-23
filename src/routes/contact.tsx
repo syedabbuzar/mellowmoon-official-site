@@ -49,10 +49,22 @@ function ContactPage() {
             and we'll route it to the right person.
           </p>
           <ul className="mt-8 space-y-5 text-sm">
-            <li className="flex gap-3"><Phone className="h-5 w-5 text-maroon mt-0.5" /><div><div className="font-medium">Phone</div><a href="tel:+910000000000" className="text-muted-foreground hover:text-maroon">+91 00000 00000</a></div></li>
-            <li className="flex gap-3"><Mail className="h-5 w-5 text-maroon mt-0.5" /><div><div className="font-medium">Email</div><a href="mailto:hello@mellowmoon.tech" className="text-muted-foreground hover:text-maroon">hello@mellowmoon.tech</a></div></li>
-            <li className="flex gap-3"><MapPin className="h-5 w-5 text-maroon mt-0.5" /><div><div className="font-medium">Office</div><div className="text-muted-foreground">India</div></div></li>
+            <li className="flex gap-3"><Phone className="h-5 w-5 text-maroon mt-0.5" /><div><div className="font-medium">Phone</div><a href="tel:+917796442339" className="text-muted-foreground hover:text-maroon">+91 77964 42339</a></div></li>
+            <li className="flex gap-3"><Mail className="h-5 w-5 text-maroon mt-0.5" /><div><div className="font-medium">Email</div><a href="mailto:mellowmoonsofttech4u@gmail.com" className="text-muted-foreground hover:text-maroon break-all">mellowmoonsofttech4u@gmail.com</a></div></li>
+            <li className="flex gap-3"><MapPin className="h-5 w-5 text-maroon mt-0.5" /><div><div className="font-medium">Office</div><div className="text-muted-foreground">Pune, Maharashtra, India</div></div></li>
           </ul>
+
+          <div className="mt-10 border border-border overflow-hidden">
+            <iframe
+              title="MellowMoon SoftTech location"
+              src="https://www.google.com/maps?q=Pune,Maharashtra,India&output=embed"
+              width="100%"
+              height="280"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
 
         <form onSubmit={onSubmit} className="bg-card border border-border p-8 grid gap-5">
