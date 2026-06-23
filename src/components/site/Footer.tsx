@@ -46,9 +46,9 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-gold uppercase tracking-wider">Contact</h4>
           <ul className="mt-4 space-y-3 text-sm">
-            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold shrink-0" /> India</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-gold shrink-0" /> +91 00000 00000</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold shrink-0" /> hello@mellowmoon.tech</li>
+            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold shrink-0" /> Pune, Maharashtra, India</li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-gold shrink-0" /> <a href="tel:+917796442339" className="hover:text-gold">+91 77964 42339</a></li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold shrink-0" /> <a href="mailto:mellowmoonsofttech4u@gmail.com" className="hover:text-gold break-all">mellowmoonsofttech4u@gmail.com</a></li>
           </ul>
         </div>
       </div>
