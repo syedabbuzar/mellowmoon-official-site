@@ -52,11 +52,11 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
         } ${overlay ? "bg-black/30 backdrop-blur-sm" : "bg-maroon-dark"}`}
       >
         <div className="container-x flex h-9 items-center justify-end gap-5">
-          <a href="tel:+910000000000" className="hidden md:flex items-center gap-1.5 hover:text-gold transition-colors">
-            <Phone className="h-3 w-3" /> +91 00000 00000
+          <a href="tel:+917796442339" className="hidden md:flex items-center gap-1.5 hover:text-gold transition-colors">
+            <Phone className="h-3 w-3" /> +91 77964 42339
           </a>
-          <a href="mailto:hello@mellowmoon.tech" className="hidden md:flex items-center gap-1.5 hover:text-gold transition-colors">
-            <Mail className="h-3 w-3" /> hello@mellowmoon.tech
+          <a href="mailto:mellowmoonsofttech4u@gmail.com" className="hidden md:flex items-center gap-1.5 hover:text-gold transition-colors">
+            <Mail className="h-3 w-3" /> mellowmoonsofttech4u@gmail.com
           </a>
           <Link to="/contact" className="hover:text-gold transition-colors">Contact Us</Link>
           <span className="opacity-40">|</span>
