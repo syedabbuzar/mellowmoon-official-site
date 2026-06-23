@@ -276,11 +276,11 @@ function HomePage() {
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-gold text-maroon-dark px-7 py-3.5 font-medium hover:bg-cream transition-colors">
               Start a project <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href="tel:+910000000000" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
-              <Phone className="h-4 w-4" /> +91 00000 00000
+            <a href="tel:+917796442339" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
+              <Phone className="h-4 w-4" /> +91 77964 42339
             </a>
-            <a href="mailto:hello@mellowmoon.tech" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
-              <Mail className="h-4 w-4" /> hello@mellowmoon.tech
+            <a href="mailto:mellowmoonsofttech4u@gmail.com" className="inline-flex items-center justify-center gap-2 border border-cream/30 px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors">
+              <Mail className="h-4 w-4" /> mellowmoonsofttech4u@gmail.com
             </a>
           </div>
         </div>
