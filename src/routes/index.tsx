@@ -25,11 +25,26 @@ export const Route = createFileRoute("/")({
 
 const services = [
   { icon: Bot, title: "Agentic AI", desc: "Autonomous AI agents that reason, plan and act inside your workflows.", to: "/services/agentic-ai" },
-  { icon: Globe2, title: "Web Applications", desc: "Production-grade web platforms engineered for scale and performance.", to: "/services/web-apps" },
-  { icon: Smartphone, title: "Hybrid Mobile Apps", desc: "One codebase. iOS, Android and the web — all natively fast.", to: "/services/mobile-apps" },
-  { icon: Code2, title: "Custom Software", desc: "Bespoke business software shaped exactly around your operations.", to: "/services/custom-software" },
+  { icon: Globe2, title: "Web Development", desc: "Building responsive and high-performance websites tailored to your business needs.", to: "/services/web-apps" },
+  { icon: Smartphone, title: "Mobile App Development", desc: "Creating user-friendly and feature-rich mobile applications for Android and iOS platforms.", to: "/services/mobile-apps" },
+  { icon: Palette, title: "UI/UX Design", desc: "Designing intuitive and engaging user interfaces and experiences that delight users.", to: "/services/custom-software" },
+  { icon: Cloud, title: "Cloud Solutions", desc: "Providing scalable and secure cloud services to enhance your business operations.", to: "/services/custom-software" },
+  { icon: Code2, title: "Software Development", desc: "Offering comprehensive custom software development solutions to meet your business needs.", to: "/services/custom-software" },
   { icon: Database, title: "CRM & Inventory", desc: "Sales, inventory and operations portals that scale with your team.", to: "/services/crm-inventory" },
+  { icon: Headphones, title: "IT Consulting", desc: "Delivering expert IT consulting services to drive your business growth and efficiency.", to: "/services/custom-software" },
   { icon: Building2, title: "Business Websites", desc: "Real-estate, education, retail and service websites that convert.", to: "/services/business-sites" },
+];
+
+const offerings = [
+  { icon: Lightbulb, title: "Innovative Solutions", desc: "We deliver cutting-edge solutions to modernize your business processes. From AI-driven automation to scalable cloud platforms, we cater to diverse industry needs — digital transformation, cybersecurity, and advanced analytics — all designed to optimize efficiency and drive growth." },
+  { icon: Users, title: "Expert Team", desc: "Our team of engineers, designers and consultants is dedicated to delivering top-quality work. With years of hands-on industry experience, we tackle complex challenges and deliver sustainable, production-grade solutions across software, IT consulting and project management." },
+  { icon: Headphones, title: "Customer Satisfaction", desc: "We prioritise customer satisfaction with tailored solutions and proactive support. From onboarding and training to ongoing maintenance, our team anticipates your needs and ensures smooth operations — building long-term partnerships, not one-off deliveries." },
+];
+
+const whyUs = [
+  { icon: Briefcase, title: "Industry Expertise", desc: "Hands-on experience across Ed-Tech, E-commerce, Healthcare, Real Estate, Beauty & Wellness and more — we understand the unique challenges of each sector and tailor solutions accordingly." },
+  { icon: Globe, title: "International Reach", desc: "We build and maintain partnerships with distinguished collaborators across India and abroad, giving us access to modern technologies and the ability to deliver tailored solutions to customers worldwide." },
+  { icon: Target, title: "Mission & Vision", desc: "Our mission is simple — prioritise client success. We work closely with you to understand your unique needs and ship software that creates measurable business outcomes." },
 ];
 
 const stats = [
