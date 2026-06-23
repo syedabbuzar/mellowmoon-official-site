@@ -131,6 +131,30 @@ function HomePage() {
         </div>
       </section>
 
+      {/* OFFERINGS */}
+      <section className="container-x py-20 md:py-28">
+        <div className="max-w-2xl mb-14">
+          <div className="text-xs uppercase tracking-[0.25em] text-maroon font-medium">Offerings</div>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl font-medium leading-tight">
+            What sets our delivery apart.
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-px bg-border">
+          {offerings.map((o, i) => (
+            <Reveal key={o.title} delay={(i % 3) as 0 | 1 | 2}>
+              <div className="bg-card p-8 h-full">
+                <div className="h-12 w-12 rounded-full bg-maroon/10 flex items-center justify-center">
+                  <o.icon className="h-6 w-6 text-maroon" />
+                </div>
+                <h3 className="mt-5 font-display text-2xl font-medium">{o.title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{o.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+
       {/* TRAINING */}
       <section className="container-x py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative">
