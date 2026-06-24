@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 import { CheckCircle2, ArrowRight, GraduationCap, Briefcase, Award, Users } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import imgMern from "@/assets/train-mern.jpg";
 import imgPyAI from "@/assets/train-python-ai.jpg";
 import imgPyFS from "@/assets/train-python-fs.jpg";
 import imgJavaFS from "@/assets/train-java-fs.jpg";
@@ -23,6 +24,11 @@ export const Route = createFileRoute("/training")({
 });
 
 const programs = [
+  {
+    img: imgMern,
+    title: "MERN Full Stack",
+    desc: "Master the modern JavaScript stack — MongoDB, Express.js, React and Node.js. Build production-grade single-page applications with REST/GraphQL APIs, JWT authentication, deployment on cloud, CI/CD and real-world projects you can showcase.",
+  },
   {
     img: imgPyAI,
     title: "Python and Agentic AI",

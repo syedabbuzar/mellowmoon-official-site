@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/site/ServiceDetail";
+import { sharedProcess, sharedWhy, sharedFaqs } from "@/lib/service-extras";
 import img from "@/assets/service-mobile.jpg";
 
 export const Route = createFileRoute("/services/mobile-apps")({
@@ -33,6 +34,10 @@ export const Route = createFileRoute("/services/mobile-apps")({
         { v: "60fps", l: "UI" },
       ]}
       image={img}
+      whyUs={sharedWhy}
+      process={sharedProcess}
+      tech={["React Native","Expo","TypeScript","Firebase","Supabase","Stripe","Push Notifications","OTA Updates","App Store","Play Store"]}
+      faqs={sharedFaqs}
     />
   ),
 });

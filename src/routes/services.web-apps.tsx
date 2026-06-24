@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/site/ServiceDetail";
+import { sharedProcess, sharedWhy, sharedFaqs } from "@/lib/service-extras";
 import img from "@/assets/service-web.jpg";
 
 export const Route = createFileRoute("/services/web-apps")({
@@ -33,6 +34,10 @@ export const Route = createFileRoute("/services/web-apps")({
         { v: "A11y", l: "WCAG ready" },
       ]}
       image={img}
+      whyUs={sharedWhy}
+      process={sharedProcess}
+      tech={["React","Next.js","TanStack","TypeScript","Node.js","Postgres","Prisma","Tailwind CSS","AWS","Cloudflare"]}
+      faqs={sharedFaqs}
     />
   ),
 });

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/site/ServiceDetail";
+import { sharedProcess, sharedWhy, sharedFaqs } from "@/lib/service-extras";
 import img from "@/assets/service-ai.jpg";
 
 export const Route = createFileRoute("/services/agentic-ai")({
@@ -33,6 +34,10 @@ export const Route = createFileRoute("/services/agentic-ai")({
         { v: "24/7", l: "Coverage" },
       ]}
       image={img}
+      whyUs={sharedWhy}
+      process={sharedProcess}
+      tech={["Python","TypeScript","LangChain","OpenAI","Anthropic","Pinecone","pgvector","FastAPI","Node.js","Redis"]}
+      faqs={sharedFaqs}
     />
   ),
 });

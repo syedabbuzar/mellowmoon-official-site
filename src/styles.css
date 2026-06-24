@@ -46,34 +46,37 @@
 :root {
   --radius: 0.375rem;
 
-  /* Brand palette pulled from logo */
-  --maroon: oklch(0.36 0.12 5);        /* ~ #6B1839 */
-  --maroon-dark: oklch(0.28 0.10 5);   /* deeper */
-  --maroon-light: oklch(0.46 0.14 8);  /* hover */
-  --gold: oklch(0.78 0.13 80);          /* ~ #C9A24C */
-  --gold-dark: oklch(0.66 0.13 75);
-  --cream: oklch(0.98 0.01 80);
-  --ink: oklch(0.18 0.01 260);
+  /* Brand palette — only white + light golden from the logo */
+  --gold: oklch(0.80 0.11 80);           /* light golden ~ #D9B36A */
+  --gold-dark: oklch(0.68 0.12 78);      /* hover/active */
+  --gold-soft: oklch(0.95 0.04 85);      /* very soft golden tint for surfaces */
+  --cream: oklch(0.99 0.01 85);          /* near-white with warm tint */
+  --ink: oklch(0.20 0.005 80);
 
-  --background: oklch(0.99 0.005 80);
-  --foreground: oklch(0.18 0.01 260);
+  /* Alias the old maroon tokens to gold so existing classes recolor automatically */
+  --maroon: var(--gold-dark);
+  --maroon-dark: oklch(0.55 0.12 75);
+  --maroon-light: var(--gold);
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.20 0.005 80);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 260);
+  --card-foreground: oklch(0.20 0.005 80);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 260);
-  --primary: oklch(0.36 0.12 5);
-  --primary-foreground: oklch(0.98 0.01 80);
-  --secondary: oklch(0.96 0.01 60);
-  --secondary-foreground: oklch(0.18 0.01 260);
-  --muted: oklch(0.96 0.01 60);
-  --muted-foreground: oklch(0.45 0.02 260);
-  --accent: oklch(0.78 0.13 80);
-  --accent-foreground: oklch(0.18 0.01 260);
+  --popover-foreground: oklch(0.20 0.005 80);
+  --primary: var(--gold-dark);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--gold-soft);
+  --secondary-foreground: oklch(0.20 0.005 80);
+  --muted: var(--gold-soft);
+  --muted-foreground: oklch(0.45 0.02 80);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.20 0.005 80);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0.01 80);
-  --border: oklch(0.90 0.01 60);
-  --input: oklch(0.90 0.01 60);
-  --ring: oklch(0.36 0.12 5);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.90 0.03 80);
+  --input: oklch(0.90 0.03 80);
+  --ring: var(--gold-dark);
 }
 
 @layer base {
