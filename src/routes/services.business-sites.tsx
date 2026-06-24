@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/site/ServiceDetail";
+import { sharedProcess, sharedWhy, sharedFaqs } from "@/lib/service-extras";
+// duplicate-removed:
+import { ServiceDetail as _SD } from "@/components/site/ServiceDetail";
 import img from "@/assets/case-realestate.jpg";
 
 export const Route = createFileRoute("/services/business-sites")({
@@ -33,6 +36,10 @@ export const Route = createFileRoute("/services/business-sites")({
         { v: "100%", l: "Satisfaction" },
       ]}
       image={img}
+      whyUs={sharedWhy}
+      process={sharedProcess}
+      tech={["React","TanStack Start","Next.js","Tailwind CSS","Sanity CMS","Strapi","Cloudflare","SEO Schema","Google Analytics","Cloudinary"]}
+      faqs={sharedFaqs}
     />
   ),
 });

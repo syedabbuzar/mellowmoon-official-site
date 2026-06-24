@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/site/ServiceDetail";
+import { sharedProcess, sharedWhy, sharedFaqs } from "@/lib/service-extras";
+// duplicate-removed:
+import { ServiceDetail as _SD } from "@/components/site/ServiceDetail";
 import img from "@/assets/service-crm.jpg";
 
 export const Route = createFileRoute("/services/crm-inventory")({
@@ -33,6 +36,10 @@ export const Route = createFileRoute("/services/crm-inventory")({
         { v: "GST", l: "Compliant" },
       ]}
       image={img}
+      whyUs={sharedWhy}
+      process={sharedProcess}
+      tech={["React","Node.js","Postgres","Redis","WhatsApp API","Razorpay","Stripe","Tally Integration","GST APIs","Reporting"]}
+      faqs={sharedFaqs}
     />
   ),
 });

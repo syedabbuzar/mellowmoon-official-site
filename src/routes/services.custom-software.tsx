@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/site/ServiceDetail";
+import { sharedProcess, sharedWhy, sharedFaqs } from "@/lib/service-extras";
+// duplicate-removed:
+import { ServiceDetail as _SD } from "@/components/site/ServiceDetail";
 import img from "@/assets/service-web.jpg";
 
 export const Route = createFileRoute("/services/custom-software")({
@@ -33,6 +36,10 @@ export const Route = createFileRoute("/services/custom-software")({
         { v: "Yours", l: "Codebase" },
       ]}
       image={img}
+      whyUs={sharedWhy}
+      process={sharedProcess}
+      tech={["TypeScript","Python","Java","Node.js","Postgres","Docker","Kubernetes","AWS","Azure","CI/CD"]}
+      faqs={sharedFaqs}
     />
   ),
 });
