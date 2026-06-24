@@ -4,6 +4,7 @@ import { Menu, X, Phone, Mail, ChevronDown, Search, Globe } from "lucide-react";
 import { Logo } from "./Logo";
 
 const nav = [
+  { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   {
     to: "/services",

@@ -62,7 +62,7 @@ const cases = [
 
 function HomePage() {
   return (
-    <SiteLayout transparentHeader>
+    <SiteLayout>
       <HeroCarousel />
 
 
