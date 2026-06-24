@@ -54,64 +54,66 @@ export function HeroCarousel() {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[640px] max-h-[900px] w-full overflow-hidden bg-maroon-dark text-cream">
-      {slides.map((s, i) => (
-        <div
-          key={i}
-          className={`absolute inset-0 transition-opacity duration-[1200ms] ease-out ${
-            i === idx ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-        >
-          <img
-            src={s.img}
-            alt=""
-            width={1920}
-            height={1080}
-            className={`absolute inset-0 h-full w-full object-cover transition-transform duration-[8000ms] ease-out ${
-              i === idx ? "scale-110" : "scale-100"
+    <section className="relative w-full overflow-hidden bg-background text-foreground">
+      <div className="container-x pt-28 md:pt-32 pb-16 grid lg:grid-cols-2 gap-10 items-center min-h-[640px]">
+        {slides.map((s, i) => (
+          <div
+            key={i}
+            className={`contents transition-opacity duration-700 ${
+              i === idx ? "" : "hidden"
             }`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-maroon-dark/95 via-maroon-dark/70 to-maroon-dark/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-maroon-dark/80 via-transparent to-transparent" />
-
-          <div className="relative h-full container-x flex items-center">
-            <div
-              className={`max-w-3xl transition-all duration-1000 ${
-                i === idx ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-            >
-              <div className="text-[11px] uppercase tracking-[0.35em] text-gold mb-6">
-                {s.eyebrow}
+          >
+            <div className="order-2 lg:order-1">
+              <div
+                key={`t-${idx}`}
+                className="opacity-0 translate-y-6 animate-[fadeUp_0.9s_ease-out_forwards]"
+              >
+                <div className="text-[11px] uppercase tracking-[0.35em] text-maroon mb-5">
+                  {s.eyebrow}
+                </div>
+                <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] text-foreground">
+                  {s.title}
+                  <br />
+                  <span className="text-maroon">{s.accent}</span>
+                </h1>
+                <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
+                  {s.desc}
+                </p>
+                <div className="mt-9 flex flex-wrap gap-3">
+                  <Link
+                    to={s.cta.to}
+                    className="group inline-flex items-center gap-3 bg-maroon text-cream pl-6 pr-2 py-2 font-medium hover:bg-maroon-light transition-all"
+                  >
+                    {s.cta.label}
+                    <span className="h-9 w-9 grid place-items-center bg-maroon-dark text-cream group-hover:translate-x-1 transition-transform">
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 border border-border text-foreground px-7 py-3.5 font-medium hover:bg-secondary transition-colors"
+                  >
+                    Talk to us
+                  </Link>
+                </div>
               </div>
-              <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.02]">
-                {s.title}
-                <br />
-                <span className="text-gradient-gold">{s.accent}</span>
-              </h1>
-              <p className="mt-7 max-w-xl text-base md:text-lg text-cream/85 leading-relaxed">
-                {s.desc}
-              </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  to={s.cta.to}
-                  className="group inline-flex items-center gap-3 bg-gold text-maroon-dark pl-6 pr-2 py-2 font-medium hover:bg-cream transition-all"
-                >
-                  {s.cta.label}
-                  <span className="h-9 w-9 grid place-items-center bg-maroon-dark text-gold group-hover:translate-x-1 transition-transform">
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 border border-cream/30 text-cream px-7 py-3.5 font-medium hover:bg-cream/10 transition-colors"
-                >
-                  Talk to us
-                </Link>
+            </div>
+
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative bg-secondary/50 border border-border overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  width={1920}
+                  height={1080}
+                  className="w-full h-auto max-h-[560px] object-contain"
+                />
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
 
       {/* Arrows */}
       <button
