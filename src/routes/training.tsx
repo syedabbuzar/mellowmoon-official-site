@@ -25,6 +25,11 @@ export const Route = createFileRoute("/training")({
 
 const programs = [
   {
+    img: imgMern,
+    title: "MERN Full Stack",
+    desc: "Master the modern JavaScript stack — MongoDB, Express.js, React and Node.js. Build production-grade single-page applications with REST/GraphQL APIs, JWT authentication, deployment on cloud, CI/CD and real-world projects you can showcase.",
+  },
+  {
     img: imgPyAI,
     title: "Python and Agentic AI",
     desc: "Master Python from fundamentals to advanced, then build production-ready AI agents using LLMs, LangChain, RAG pipelines, vector databases and function calling. Ideal for students aiming for AI/ML engineering roles.",
