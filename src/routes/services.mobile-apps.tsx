@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/site/ServiceDetail";
 import { sharedProcess, sharedWhy, sharedFaqs } from "@/lib/service-extras";
-// duplicate-removed:
-import { ServiceDetail as _SD } from "@/components/site/ServiceDetail";
 import img from "@/assets/service-mobile.jpg";
 
 export const Route = createFileRoute("/services/mobile-apps")({
