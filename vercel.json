@@ -1,5 +1,17 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "framework": null
+  "outputDirectory": ".output/public",
+  "framework": null,
+  "functions": {
+    ".output/server/index.mjs": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/.output/server/index.mjs"
+    }
+  ]
 }
