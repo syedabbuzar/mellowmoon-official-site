@@ -10,7 +10,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import favicon from "../assets/favicon.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -75,7 +74,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "MellowMoon SoftTech Pvt Ltd — Engineering Software. Empowering Business." },
       { name: "description", content: "MellowMoon SoftTech builds AI-powered software, web & mobile apps, CRM, inventory and business platforms — and trains the next generation of engineers." },
       { name: "author", content: "MellowMoon SoftTech Pvt Ltd" },
-      { name: "theme-color", content: "#6B1839" },
+      { name: "theme-color", content: "#0D1422" },
       { property: "og:site_name", content: "MellowMoon SoftTech" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -88,8 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: favicon.url },
-      { rel: "apple-touch-icon", href: favicon.url },
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/mellowmoon-logo.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" },
@@ -102,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "MellowMoon SoftTech Pvt Ltd",
           url: "/",
-          logo: favicon.url,
+          logo: "/mellowmoon-logo.png",
           description: "Software engineering, AI and training company.",
           sameAs: [],
         }),
