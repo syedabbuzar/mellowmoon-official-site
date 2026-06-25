@@ -1,5 +1,3 @@
-import logo from "@/assets/mellowmoon-logo.png.asset.json";
-
 export function Logo({
   className = "",
   showText = false,
@@ -13,7 +11,7 @@ export function Logo({
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <img
-        src={logo.url}
+        src="/mellowmoon-logo.png"
         alt="MellowMoon SoftTech Pvt Ltd"
         className="h-12 w-auto object-contain select-none"
         draggable={false}
