@@ -1,8 +1,9 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".vinxi/build/dist",
-  "framework": "other",
-  "serverFunctions": {
-    "directory": ".vinxi/build/serverFunctions"
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs20.x"
+    }
   }
 }
